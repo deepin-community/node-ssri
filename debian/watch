@@ -1,0 +1,19 @@
+version=4
+opts=\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-ssri-$1.tar.gz/ \
+ https://github.com/npm/ssri/tags .*/archive/.*/v?([\d\.]+).tar.gz
+
+opts=\
+ctype=nodejs,\
+component=figgy-pudding,\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-figgy-pudding-$1.tar.gz/ \
+ https://github.com/zkat/figgy-pudding/tags .*/archive/.*/v?([\d\.]+).tar.gz ignore
+
+opts=\
+ctype=nodejs,\
+component=minipass,\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-minipass-$1.tar.gz/ \
+ https://github.com/isaacs/minipass/tags .*/archive/.*/v?([\d\.]+).tar.gz ignore

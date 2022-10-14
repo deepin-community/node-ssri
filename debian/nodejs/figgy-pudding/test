@@ -1,0 +1,1 @@
+tap -J --100 --coverage test/*.js
