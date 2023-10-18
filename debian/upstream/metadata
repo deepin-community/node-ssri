@@ -4,3 +4,4 @@ Bug-Database: https://github.com/zkat/ssri/issues
 Repository: https://github.com/zkat/ssri.git
 Repository-Browse: https://github.com/zkat/ssri
 Bug-Submit: https://github.com/zkat/ssri/issues/new
+Security-Contact: https://github.com/zkat/ssri/tree/HEAD/SECURITY.md
