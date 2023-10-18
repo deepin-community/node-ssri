@@ -1,1 +1,1 @@
-tap -J test/*.js
+tap -R spec -J test/*.js

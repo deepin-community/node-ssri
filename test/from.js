@@ -27,7 +27,7 @@ test('fromHex', t => {
     'sha512-3q2+7w==?a?b?c',
     'options added to entry'
   )
-  t.done()
+  t.end()
 })
 
 test('fromData', t => {
@@ -49,19 +49,21 @@ test('fromData', t => {
   t.equal(
     ssri.fromData(TEST_DATA, {
       algorithms: ['sha256', 'sha384'],
-      options: ['foo', 'bar']
+      options: ['foo', 'bar'],
     }).toString(), [
       `sha256-${hash(TEST_DATA, 'sha256')}?foo?bar`,
-      `sha384-${hash(TEST_DATA, 'sha384')}?foo?bar`
+      `sha384-${hash(TEST_DATA, 'sha384')}?foo?bar`,
     ].join(' '),
     'can add opts.options to each entry'
   )
-  t.done()
+  t.end()
 })
 
 test('fromStream', t => {
   let streamEnded
-  const stream = fileStream().on('end', () => { streamEnded = true })
+  const stream = fileStream().on('end', () => {
+    streamEnded = true
+  })
   return ssri.fromStream(stream).then(integrity => {
     t.equal(
       integrity.toString(),
@@ -70,25 +72,25 @@ test('fromStream', t => {
     )
     t.ok(streamEnded, 'source stream ended')
     return ssri.fromStream(fileStream(), {
-      algorithms: ['sha256', 'sha384']
+      algorithms: ['sha256', 'sha384'],
     })
   }).then(integrity => {
     t.equal(
       integrity.toString(), [
         `sha256-${hash(TEST_DATA, 'sha256')}`,
-        `sha384-${hash(TEST_DATA, 'sha384')}`
+        `sha384-${hash(TEST_DATA, 'sha384')}`,
       ].join(' '),
       'can generate multiple metadata entries with opts.algorithms'
     )
     return ssri.fromStream(fileStream(), {
       algorithms: ['sha256', 'sha384'],
-      options: ['foo', 'bar']
+      options: ['foo', 'bar'],
     })
   }).then(integrity => {
     t.equal(
       integrity.toString(), [
         `sha256-${hash(TEST_DATA, 'sha256')}?foo?bar`,
-        `sha384-${hash(TEST_DATA, 'sha384')}?foo?bar`
+        `sha384-${hash(TEST_DATA, 'sha384')}?foo?bar`,
       ].join(' '),
       'can add opts.options to each entry'
     )

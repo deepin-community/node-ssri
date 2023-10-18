@@ -1,6 +1,22 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+### [9.0.1](https://github.com/npm/ssri/compare/v9.0.0...v9.0.1) (2022-05-19)
+
+
+### Bug Fixes
+
+* store emitted events and re-emit them for late listeners ([#39](https://github.com/npm/ssri/issues/39)) ([c5421f1](https://github.com/npm/ssri/commit/c5421f1fb4f684b941e4ea1abff83b7048a48d61))
+
+## [9.0.0](https://github.com/npm/ssri/compare/v8.0.1...v9.0.0) (2022-04-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* this drops support for node 8, node 10, and non-LTS versions of node 12 and node 14
+
+### Dependencies
+
+* @npmcli/template-oss@3.2.2 ([#31](https://github.com/npm/ssri/issues/31)) ([a14b37a](https://github.com/npm/ssri/commit/a14b37aaec562339e836960478d6f506f63243e0))
 
 ### [8.0.1](https://github.com/npm/ssri/compare/v8.0.0...v8.0.1) (2021-01-27)
 
