@@ -6,7 +6,7 @@ Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
 Build-Depends: debhelper-compat (= 13)
  , dh-sequence-nodejs
- , node-minipass <!nocheck>
+ , node-minipass (>> 3.3.6+~cs9.4.19-3~) <!nocheck>
  , node-tap <!nocheck>
  , node-through2 <!nocheck>
 Standards-Version: 4.6.1
@@ -18,7 +18,7 @@ Rules-Requires-Root: no
 Package: node-ssri
 Architecture: all
 Depends: ${misc:Depends}
- , node-minipass
+ , node-minipass (>> 3.3.6+~cs9.4.19-3~)
 Multi-Arch: foreign
 Description: Utility for parsing, serializing, generating and verifying  ssri metadata
  SSRI, short for Standard Subresource Integrity, is a Node.js utility for
