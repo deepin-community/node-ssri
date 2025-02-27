@@ -1,0 +1,24 @@
+From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
+Date: Fri, 9 Aug 2024 20:37:06 +0000
+Subject: Use not default export minipass
+
+Ease transition
+
+Forwarded: not-needed
+---
+ lib/index.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lib/index.js b/lib/index.js
+index 1443137..48c77c1 100644
+--- a/lib/index.js
++++ b/lib/index.js
+@@ -1,7 +1,7 @@
+ 'use strict'
+ 
+ const crypto = require('crypto')
+-const MiniPass = require('minipass')
++const {Minipass: MiniPass} = require('minipass')
+ 
+ const SPEC_ALGORITHMS = ['sha256', 'sha384', 'sha512']
+ 

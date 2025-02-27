@@ -1,3 +1,10 @@
+node-ssri (9.0.1-3) unstable; urgency=medium
+
+  * Team upload
+  * Ease transition for node-minipass
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 09 Aug 2024 20:38:35 +0000
+
 node-ssri (9.0.1-2) unstable; urgency=medium
 
   [ Yadd ]
